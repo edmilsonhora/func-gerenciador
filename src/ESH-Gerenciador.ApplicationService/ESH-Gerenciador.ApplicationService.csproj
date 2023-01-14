@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>ESH_Gerenciador.ApplicationService</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ESH-Gerenciador.DataAccess\ESH-Gerenciador.DataAccess.csproj" />
+    <ProjectReference Include="..\ESH-Gerenciador.DomainModel\ESH-Gerenciador.DomainModel.csproj" />
+  </ItemGroup>
+
+</Project>
