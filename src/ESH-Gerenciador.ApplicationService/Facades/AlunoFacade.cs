@@ -23,10 +23,11 @@ namespace ESH_Gerenciador.ApplicationService.Facades
             }
         }
 
-        public async Task<List<AlunoView>> ObterPaginadoAsync(int pageIndex, int pageSize)
+        public async Task<PaginadorDeListas<AlunoView>> ObterPaginadoAsync(int pageIndex, int pageSize)
         {
+            var count = await _repository.Alunos.CountAsync();
             var res = await _repository.Alunos.ObterPaginadoAsync(pageIndex, pageSize);
-            return res.ConvertToView();
+            return new PaginadorDeListas<AlunoView>(res.ConvertToView(), count);
         }
 
         public async Task<AlunoView> ObterPorIdAsync(int id)
