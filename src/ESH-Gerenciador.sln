@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESH-Gerenciador.FuncApp", "ESH-Gerenciador.FuncApp\ESH-Gerenciador.FuncApp.csproj", "{6480C099-CBC5-44DC-A123-16CB0CCD208C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESH-Gerenciador.FuncApp", "ESH-Gerenciador.FuncApp\ESH-Gerenciador.FuncApp.csproj", "{6480C099-CBC5-44DC-A123-16CB0CCD208C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-FrontEnd", "1-FrontEnd", "{A8F1602E-2716-444C-989E-97DB43D3428B}"
 EndProject
@@ -17,11 +17,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1-DataAccess", "2.1-DataA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.2-DomainModel", "2.2-DomainModel", "{DD94887D-E642-46EA-B3A5-C47266C59286}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESH-Gerenciador.DomainModel", "ESH-Gerenciador.DomainModel\ESH-Gerenciador.DomainModel.csproj", "{12DDCC3B-23D5-41F0-A3E4-DC2DEE51A9F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESH-Gerenciador.DomainModel", "ESH-Gerenciador.DomainModel\ESH-Gerenciador.DomainModel.csproj", "{12DDCC3B-23D5-41F0-A3E4-DC2DEE51A9F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESH-Gerenciador.DataAccess", "ESH-Gerenciador.DataAccess\ESH-Gerenciador.DataAccess.csproj", "{1F9D97F1-4652-4084-87D5-40ABA4B14701}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESH-Gerenciador.DataAccess", "ESH-Gerenciador.DataAccess\ESH-Gerenciador.DataAccess.csproj", "{1F9D97F1-4652-4084-87D5-40ABA4B14701}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESH-Gerenciador.ApplicationService", "ESH-Gerenciador.ApplicationService\ESH-Gerenciador.ApplicationService.csproj", "{97D6D2AE-7D7B-46BD-A340-A6AF9F24655B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESH-Gerenciador.ApplicationService", "ESH-Gerenciador.ApplicationService\ESH-Gerenciador.ApplicationService.csproj", "{97D6D2AE-7D7B-46BD-A340-A6AF9F24655B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-CrossCutting", "3-CrossCutting", "{62EDC198-A4EC-49D6-AB3D-42BD36EEF6D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.0-Common_Place", "3.0-Common_Place", "{292A7987-4003-4BE0-80C8-B236AB0A692E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESH-Gerenciador.Common__Place", "ESH-Gerenciador.Common__Place\ESH-Gerenciador.Common__Place.csproj", "{EA868BCE-BF7D-42CA-B9CB-D0E2BF6E8D48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,10 @@ Global
 		{97D6D2AE-7D7B-46BD-A340-A6AF9F24655B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97D6D2AE-7D7B-46BD-A340-A6AF9F24655B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97D6D2AE-7D7B-46BD-A340-A6AF9F24655B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA868BCE-BF7D-42CA-B9CB-D0E2BF6E8D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA868BCE-BF7D-42CA-B9CB-D0E2BF6E8D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA868BCE-BF7D-42CA-B9CB-D0E2BF6E8D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA868BCE-BF7D-42CA-B9CB-D0E2BF6E8D48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +68,8 @@ Global
 		{12DDCC3B-23D5-41F0-A3E4-DC2DEE51A9F9} = {DD94887D-E642-46EA-B3A5-C47266C59286}
 		{1F9D97F1-4652-4084-87D5-40ABA4B14701} = {F0D063A1-A78C-402D-A900-985D51EE292C}
 		{97D6D2AE-7D7B-46BD-A340-A6AF9F24655B} = {F0425B9D-B2B9-4CE4-8754-A777E497532E}
+		{292A7987-4003-4BE0-80C8-B236AB0A692E} = {62EDC198-A4EC-49D6-AB3D-42BD36EEF6D6}
+		{EA868BCE-BF7D-42CA-B9CB-D0E2BF6E8D48} = {292A7987-4003-4BE0-80C8-B236AB0A692E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5CC216AF-4CE7-4120-A36D-7ACEB666CFCA}

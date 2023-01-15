@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ESH_Gerenciador.DomainModel.Models
+﻿namespace ESH_Gerenciador.DomainModel.Models
 {
-    public class Turma :EntityBase
+    public class Turma : EntityBase
     {
         public string Nome { get; set; } = null!;
         public int QtdMaxAlunos { get; set; }
@@ -18,5 +12,24 @@ namespace ESH_Gerenciador.DomainModel.Models
             CampoNumericoObrigatorio("Qtd Max Alunos", QtdMaxAlunos);
             base.Validar();
         }
+
+        public void AddAluno()
+        {
+            if (QtdAtualAlunos < QtdMaxAlunos)
+            {
+                QtdAtualAlunos++;
+            }
+            else
+            {
+                throw new ApplicationException($"A turma {Nome}, atingiu a quantidade máxima de alunos permitida.{Environment.NewLine}");
+            }
+        }
+
+        public void RemoveAluno()
+        {
+            if (QtdAtualAlunos > 0)
+                QtdAtualAlunos--;
+        }
+
     }
 }

@@ -2,11 +2,6 @@
 using ESH_Gerenciador.ApplicationService.Views;
 using ESH_Gerenciador.DataAccess;
 using ESH_Gerenciador.DomainModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ESH_Gerenciador.ApplicationService
 {

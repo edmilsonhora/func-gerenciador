@@ -2,11 +2,6 @@
 using ESH_Gerenciador.ApplicationService.Views;
 using ESH_Gerenciador.DomainModel;
 using ESH_Gerenciador.DomainModel.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ESH_Gerenciador.ApplicationService.Facades
 {
@@ -22,9 +17,9 @@ namespace ESH_Gerenciador.ApplicationService.Facades
         public async Task ExcluirAsync(int id)
         {
             var obj = await _repository.Alunos.ObterPorIdAsync(id);
-            if(obj is not null)
+            if (obj is not null)
             {
-               await _repository.Alunos.ExcluirAsync(obj);
+                await _repository.Alunos.ExcluirAsync(obj);
             }
         }
 
@@ -50,12 +45,12 @@ namespace ESH_Gerenciador.ApplicationService.Facades
         {
             var obj = view.Id == 0 ? new Aluno() : _repository.Alunos.ObterPorIdAsync(view.Id).Result;
             obj.Nome = view.Nome;
-            obj.RA=view.RA;
-            obj.TurmaId= view.TurmaId;
-            
+            obj.RA = view.RA;
+            obj.TurmaId = view.TurmaId;
+
             obj.Validar();
 
-           await _repository.Alunos.SalvarAsync(obj);
+            await _repository.Alunos.SalvarAsync(obj);
         }
     }
 }

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ESH_Gerenciador.DomainModel.Models
+﻿namespace ESH_Gerenciador.DomainModel.Models
 {
-    public class Aluno:EntityBase
+    public class Aluno : EntityBase
     {
         public string Nome { get; set; } = null!;
         public string RA { get; set; } = null!;
@@ -19,7 +13,24 @@ namespace ESH_Gerenciador.DomainModel.Models
             CampoNumericoObrigatorio("Turma Id", TurmaId);
             base.Validar();
         }
+
+        public void TurmaAddAluno()
+        {
+            if (Id == 0)
+            {
+                Turma.AddAluno();
+            }
+        }
+
+        public void TurmaRemoveAluno()
+        {
+            Turma.RemoveAluno();
+        }
     }
 
-    public interface IAlunoRepository : IRepositoryBase<Aluno> { }
+    public interface IAlunoRepository : IRepositoryBase<Aluno>
+    {
+
+        Task<int> ObterQtdAlunosPorTurmaAsync(int turmaId);
+    }
 }

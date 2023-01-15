@@ -2,13 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>ESH_Gerenciador.DomainModel</RootNamespace>
+    <RootNamespace>ESH_Gerenciador.Common__Place</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ESH-Gerenciador.Common__Place\ESH-Gerenciador.Common__Place.csproj" />
-  </ItemGroup>
 
 </Project>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace ESH_Gerenciador.DomainModel.Models
 {
@@ -13,7 +9,7 @@ namespace ESH_Gerenciador.DomainModel.Models
 
         public virtual void Validar()
         {
-            if(RegrasQuebradas.Length > 0)
+            if (RegrasQuebradas.Length > 0)
             {
                 throw new ApplicationException(RegrasQuebradas.ToString());
             }

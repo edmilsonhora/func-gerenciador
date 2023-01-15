@@ -1,12 +1,6 @@
 ﻿using Dommel;
 using ESH_Gerenciador.DomainModel.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Dapper.SqlMapper;
 
 namespace ESH_Gerenciador.DataAccess
 {
@@ -18,6 +12,14 @@ namespace ESH_Gerenciador.DataAccess
         }
 
         public string Connection { get; }
+
+        public async Task<long> CountAsync()
+        {
+            using (var db = new SQLiteConnection(Connection))
+            {
+                return await db.CountAsync<T>();
+            }
+        }
 
         public async Task ExcluirAsync(T entity)
         {
@@ -39,7 +41,7 @@ namespace ESH_Gerenciador.DataAccess
         {
             using (var db = new SQLiteConnection(Connection))
             {
-              return await db.GetAsync<T>(id);
+                return await db.GetAsync<T>(id);
             }
         }
 

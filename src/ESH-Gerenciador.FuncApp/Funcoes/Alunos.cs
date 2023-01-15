@@ -1,24 +1,20 @@
-using System;
-using System.IO;
-using System.Threading.Tasks;
+using ESH_Gerenciador.ApplicationService;
+using ESH_Gerenciador.ApplicationService.Views;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using ESH_Gerenciador.ApplicationService.Views;
-using System.Runtime.CompilerServices;
-using ESH_Gerenciador.ApplicationService;
+using System;
+using System.Threading.Tasks;
 
 namespace ESH_Gerenciador.FuncApp.Funcoes
 {
     public static class Alunos
     {
-        private static IFacade _facade = new Facade(); 
+        private static IFacade _facade = new Facade();
 
         [FunctionName("Alunos_Salvar")]
-        public static async Task<IActionResult> Salvar([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "alunos/salvar")] HttpRequest req)            
+        public static async Task<IActionResult> Salvar([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "alunos/salvar")] HttpRequest req)
         {
             try
             {
